@@ -1,0 +1,1 @@
+import {Recipes} from '/imports/api/collections/recipe.js';
