@@ -1,1 +1,1 @@
-import {Recipes} from '/imports/api/collections/recipe.js';
+import '/imports/api/collections/recipe.js';

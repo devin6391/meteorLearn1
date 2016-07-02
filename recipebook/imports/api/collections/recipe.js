@@ -2,7 +2,13 @@ import { Meteor } from 'meteor/meteor';
 import { Mongo } from 'meteor/mongo';
 import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
-var RecipesCollection = new Mongo.Collection('recipes');
+export const Recipes = new Mongo.Collection('recipes');
+
+Recipes.allow({
+	insert(userId, doc){
+		return !!userId;
+	}
+})
 
 var RecipeSchema = new SimpleSchema({
 	name: {
@@ -18,6 +24,9 @@ var RecipeSchema = new SimpleSchema({
 		label: "Author",
 		autoValue(){
 			return this.userId
+		},
+		autoform:{
+			type: "hidden"
 		}
 	},
 	createdAt: {
@@ -25,17 +34,11 @@ var RecipeSchema = new SimpleSchema({
 		label: "Created At",
 		autoValue(){
 			return new Date();
+		},
+		autoform:{
+			type: "hidden"
 		}
 	}
 });
 
-RecipesCollection.attachSchema( RecipeSchema );
-
-if (Meteor.isServer) {
-  // This code only runs on the server
-  Meteor.publish('recipes', function tasksPublication() {
-    return RecipesCollection.find({});
-  });
-}
-
-export const Recipes = RecipesCollection;
+Recipes.attachSchema( RecipeSchema );
