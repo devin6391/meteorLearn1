@@ -10,5 +10,5 @@ import '/imports/ui/pages/Recipes.controller.js';
 import '/lib/router.js';
 
 Template.body.onCreated(function bodyOnCreated() {
-	
+	console.log("Full name: "+Meteor.settings.public.firstname+" "+(Meteor.settings.private ? Meteor.settings.private.lastname : ""));
 })

@@ -6,4 +6,5 @@ Meteor.startup(() => {
 	Meteor.publish('recipes', function tasksPublication() {
     return Recipes.find({author: this.userId});
   });
+  console.log("Full name: "+Meteor.settings.public.firstname+" "+(Meteor.settings.private ? Meteor.settings.private.lastname : ""));
 });

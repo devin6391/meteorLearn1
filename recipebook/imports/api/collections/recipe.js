@@ -8,9 +8,18 @@ Recipes.allow({
 	insert(userId, doc){
 		return !!userId;
 	}
-})
+});
 
-var RecipeSchema = new SimpleSchema({
+let Ingredient = new SimpleSchema({
+	name: {
+		type: String
+	},
+	amount: {
+		type: String
+	}
+});
+
+let RecipeSchema = new SimpleSchema({
 	name: {
 		type: String,
 		label: "Name"
@@ -18,6 +27,17 @@ var RecipeSchema = new SimpleSchema({
 	desc: {
 		type: String,
 		label: "Description"
+	},
+	ingredients: {
+		type: [Ingredient]
+	},
+	inMenu: {
+		type: Boolean,
+		defaultValue: false,
+		optional: true,
+		autoform: {
+			type: "hidden"
+		}
 	},
 	author: {
 		type: String,

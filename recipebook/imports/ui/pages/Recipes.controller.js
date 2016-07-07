@@ -7,6 +7,6 @@ import '/imports/ui/pages/Recipes.html';
 Template.Recipes.onCreated(function bodyOnCreated() {
 	console.log("recipes page created");
 	Meteor.subscribe('recipes');
-	console.log("getting recipes collection:")
+	console.log("getting recipes collection in frontend:")
 	console.log(Recipes.find({}));
 });
