@@ -40,7 +40,7 @@ erasaur:meteor-lodash@4.0.0
 es5-shim@4.5.12_1
 fastclick@1.0.12
 fortawesome:fontawesome@4.5.0
-fourseven:scss@3.4.3
+fourseven:scss@3.8.0_1
 geojson-utils@1.0.9
 gwendall:auth-client-callbacks@0.1.0
 hot-code-push@1.0.4
@@ -76,7 +76,6 @@ meteortoys:status@3.0.0
 meteortoys:sub@3.0.0
 meteortoys:throttle@3.0.0
 meteortoys:toykit@3.0.4
-minifier-css@1.1.12_1
 minifier-js@1.1.12_1
 minimongo@1.0.17
 mobile-experience@1.0.4
@@ -111,8 +110,8 @@ spacebars@1.0.12
 spacebars-compiler@1.0.12
 spiderable@1.0.13
 srp@1.0.9
-standard-minifier-css@1.0.7_1
 standard-minifier-js@1.0.7_1
+stylus@2.512.3_1
 templating@1.1.12_1
 templating-tools@1.0.4
 tracker@1.0.14

@@ -7,6 +7,12 @@ export const Recipes = new Mongo.Collection('recipes');
 Recipes.allow({
 	insert(userId, doc){
 		return !!userId;
+	},
+	update(userId, doc){
+		return !!userId;
+	},
+	remove(userId, doc){
+		return !!userId;
 	}
 });
 
